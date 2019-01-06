@@ -1,21 +1,6 @@
 language: node_js
 node_js:
   - "8.15"
-sudo: false
 cache:
   directories:
-    - node_modules
-before_install:
-  # Configure npm
-  # Update Node.js modules
-  - |
-    # Prune and rebuild node_modules
-    if [[ -d node_modules ]]; then
-      npm prune
-      npm rebuild
-    fi
-script:
-  # Run linting
-  - npm run lint
-  # Run test script
-  - npm run test
+    - "node_modules"
