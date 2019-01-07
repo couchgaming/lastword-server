@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 const jwt = require('jsonwebtoken');
 const http = require('http');
 // const uuid = require('uuid');
@@ -25,6 +26,7 @@ global.games = {
 // Defining Express HTTP server
 //
 const app = express();
+app.use(cors());
 app.use(bodyParser.json());
 
 //
