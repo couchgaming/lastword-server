@@ -19,6 +19,7 @@ module.exports = StateMachine.factory({
     { name: 'showFinalScore', from: 'intermediateScore', to: 'finalScore' },
     { name: 'startNewGame', from: 'finalScore', to: 'newGame' },
   ],
+  data: (data) => data,
   methods: {
     onStart: () => {
       // 1. Provide first letter
